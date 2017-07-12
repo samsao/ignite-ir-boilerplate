@@ -1,17 +1,17 @@
 import { takeLatest } from 'redux-saga/effects'
-import API from '../Services/Api'
-import FixtureAPI from '../Services/FixtureApi'
-import DebugConfig from '../Config/DebugConfig'
+import API from '@mobile/Services/Api'
+import FixtureAPI from '@mobile/Services/FixtureApi'
+import DebugConfig from '@mobile/Config/DebugConfig'
 
 /* ------------- Types ------------- */
 
-import { StartupTypes } from '../Redux/StartupRedux'
-import { GithubTypes } from '../Redux/GithubRedux'
+import { StartupTypes } from '@mobile/Redux/StartupRedux'
+import { GithubTypes } from '@mobile/Redux/GithubRedux'
 
 /* ------------- Sagas ------------- */
 
-import { startup } from './StartupSagas'
-import { getUserAvatar } from './GithubSagas'
+import { startup } from '@mobile/Sagas/StartupSagas'
+import { getUserAvatar } from '@mobile/Sagas/GithubSagas'
 
 /* ------------- API ------------- */
 

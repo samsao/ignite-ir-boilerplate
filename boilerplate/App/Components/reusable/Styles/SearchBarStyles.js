@@ -1,19 +1,19 @@
 import {StyleSheet} from 'react-native'
-import { Fonts, Colors, Metrics } from '../../Themes/'
+import { Fonts, Colors, Metrics } from '@mobile/Themes/'
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: Metrics.smallMargin,
+    marginTop: Metrics.margin.small,
     backgroundColor: Colors.transparent,
     flexDirection: 'row',
-    width: Metrics.screenWidth - Metrics.baseMargin
+    width: Metrics.width.screen - Metrics.margin.base,
   },
   searchInput: {
     flex: 5,
-    height: Metrics.searchBarHeight,
+    height: Metrics.height.searchBar,
     alignSelf: 'center',
-    padding: Metrics.smallMargin,
+    padding: Metrics.margin.small,
     textAlign: 'left',
     fontFamily: Fonts.type.base,
     fontSize: Fonts.size.instructions,
@@ -22,22 +22,22 @@ export default StyleSheet.create({
     borderColor: Colors.snow,
     paddingLeft: 30,
     color: Colors.snow,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   searchIcon: {
-    left: Metrics.doubleBaseMargin,
+    left: Metrics.margin.doubleBase,
     alignSelf: 'center',
     color: Colors.snow,
-    backgroundColor: Colors.transparent
+    backgroundColor: Colors.transparent,
   },
   cancelButton: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: Metrics.baseMargin
+    marginHorizontal: Metrics.margin.base,
   },
   buttonLabel: {
     color: Colors.snow,
     fontFamily: Fonts.type.base,
-    fontSize: Fonts.size.regular
-  }
+    fontSize: Fonts.size.regular,
+  },
 })

@@ -4,5 +4,18 @@
     "production": {
       "plugins": ["ignite-ignore-reactotron"]
     }
-  }
+  },
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@common": "common/src",
+          "@mobile": "./src",
+          "@mobile/resources": "./resources"
+        }
+      }
+    ]
+  ],
+  "sourceMaps": true
 }

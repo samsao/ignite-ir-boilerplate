@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
-import styles from './Styles/SearchBarStyles'
-import { Colors, Metrics } from '../Themes/'
+import styles from '@mobile/components/reusable/styles/SearchBarStyles'
+import { Colors, Metrics } from '@mobile/Themes/'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-export default class SearchBar extends Component {
-  static propTypes = {
-    onSearch: PropTypes.func.isRequired,
-    onCancel: PropTypes.func.isRequired,
-    searchTerm: PropTypes.string
-  }
+type Props = {
+  onSearch: (text: string) => any,
+  onCancel: (Event) => any,
+  searchTerm: string,
+}
 
-  render () {
+export default class SearchBar extends Component {
+  props: Props;
+
+  render() {
     const { onSearch, onCancel, searchTerm } = this.props
     const onSubmitEditing = () => onSearch(searchTerm)
     return (
