@@ -4,7 +4,7 @@ jest
 })
 <%_ if (props.i18n === 'react-native-i18n') { _%>
 .mock('react-native-i18n', () => {
-  const english = require('../App/I18n/languages/english.json')
+  const english = require('@mobile/I18n/languages/english.json')
   const keys = require('ramda')
   const replace = require('ramda')
   const forEach = require('ramda')

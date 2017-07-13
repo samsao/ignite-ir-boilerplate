@@ -1,0 +1,22 @@
+[ignore]
+<PROJECT_ROOT>/.*commands/.*
+<PROJECT_ROOT>/.*lib/.*
+<PROJECT_ROOT>/.*node_modules/.*
+<PROJECT_ROOT>/.*templates/.*
+<PROJECT_ROOT>/.*test/.*
+<PROJECT_ROOT>/boilerplate.js
+
+[libs]
+./.flow
+
+[options]
+all=true
+emoji=true
+experimental.strict_type_args=true
+munge_underscores=true
+module.system=node
+
+module.name_mapper='^@mobile\/\(.*\)$' -> '<PROJECT_ROOT>/boilerplate/App'
+
+suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue

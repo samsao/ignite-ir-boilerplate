@@ -1,4 +1,4 @@
-const colors = {
+const Colors = {
   background: '#1F0808',
   clear: 'rgba(0,0,0,0)',
   white: '#FFFFFF',
@@ -25,6 +25,6 @@ const colors = {
   border: '#483F53',
   banner: '#5F3E63',
   text: '#E0D7E5',
-}
+};
 
-export default colors
+export default Colors;

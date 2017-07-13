@@ -13,10 +13,10 @@ const commonContainer = {
   alignItems: 'center',
 };
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   successContainer: {
     ...commonContainer,
-    backgroundColor: Colors.success
+    backgroundColor: Colors.success,
   },
   successText: {
     ...commonTextStyle,
@@ -24,18 +24,18 @@ const styles = StyleSheet.create({
   },
   failureContainer: {
     ...commonContainer,
-    backgroundColor: Colors.error
+    backgroundColor: Colors.error,
   },
   failureText: {
     ...commonTextStyle,
-    color: Colors.white
+    color: Colors.white,
   },
   statelessContainer: {
     ...commonContainer,
-    backgroundColor: Colors.steel
+    backgroundColor: Colors.steel,
   },
   statelessText: {
     fontSize: Fonts.size.small,
-    color: Colors.black
+    color: Colors.black,
   },
 });

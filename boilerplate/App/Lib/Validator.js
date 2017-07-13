@@ -1,12 +1,12 @@
-import _ from "lodash";
+import _ from 'lodash';
 
-export default function validate(text, rulesMessages) {
+export function validate(text, rulesMessages) {
   const returnValue = {
     isValid: true,
-    message: ""
+    message: '',
   };
 
-  _.forEach(rulesMessages, ruleMessage => {
+  _.forEach(rulesMessages, (ruleMessage) => {
     if (!ruleMessage.rule(text)) {
       returnValue.isValid = false;
       returnValue.message = ruleMessage.errorMessage;

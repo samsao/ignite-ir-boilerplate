@@ -1,7 +1,9 @@
 {
   "version": "0.0.1",
   "scripts": {
-    "lint": "eslint index.android.js index.ios.js src/**",
+    "lint": "yarn run -s lint:flow && yarn run -s lint:eslint",
+    "lint:eslint": "NODE_ENV=development eslint --ignore-path '.gitignore' .",
+    "lint:flow": "flow check",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm start --reset-cache",
     "clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
@@ -47,17 +49,11 @@
     "seamless-immutable": "^7.0.1"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.18.0",
     "enzyme": "^2.6.0",
     "mockery": "^2.0.0",
     "husky": "^0.13.1",
     "react-addons-test-utils": "~15.4.1",
     "react-dom": "~15.4.1",
-    "babel-core": "^6.24.0",
-    "babel-eslint": "^7.2.1",
-    "babel-jest": "^19.0.0",
-    "babel-plugin-module-resolver": "^2.5.0",
-    "babel-preset-react-native": "1.9.1",
     "reactotron-react-native": "^1.11.1",
     "reactotron-redux": "^1.11.1",
     "reactotron-redux-saga": "^1.11.1",

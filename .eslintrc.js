@@ -11,5 +11,11 @@ module.exports = {
   },
   globals: {
     $Keys: true
+  },
+  rules: {
+    "no-console": "off",
+    "import/no-commonjs": "off",
+    "func-names": "off",
+    
   }
 };

@@ -1,12 +1,12 @@
-const screenExamples = require('./screenExamples')
+const screenExamples = require('./screenExamples');
 
 /**
  * Add the plugin.
  *
  * @param {any} context - The gluegun context.
  */
-async function add (context) {
-  await screenExamples.add(context)
+async function add(context) {
+  await screenExamples.add(context);
 }
 
 /**
@@ -14,8 +14,8 @@ async function add (context) {
  *
  * @param {any} context - The gluegun context.
  */
-async function remove (context) {
-  await screenExamples.remove(context)
+async function remove(context) {
+  await screenExamples.remove(context);
 }
 
-module.exports = { add, remove }
+module.exports = { add, remove };

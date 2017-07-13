@@ -1,14 +1,15 @@
-import { combineReducers } from 'redux'
-import configureStore from './CreateStore'
-import rootSaga from '../Sagas/'
+/* eslint-disable global-require */
+import { combineReducers } from 'redux';
+import configureStore from '@mobile/Redux/CreateStore';
+import rootSaga from '@mobile/Sagas/';
 
 export default () => {
   /* ------------- Assemble The Reducers ------------- */
   const rootReducer = combineReducers({
-    nav: require('./NavigationRedux').reducer,
-    github: require('./GithubRedux').reducer,
-    search: require('./SearchRedux').reducer
-  })
+    nav: require('@mobile/Redux/NavigationRedux').reducer,
+    github: require('@mobile/Redux/GithubRedux').reducer,
+    search: require('@mobile/Redux/SearchRedux').reducer,
+  });
 
-  return configureStore(rootReducer, rootSaga)
-}
+  return configureStore(rootReducer, rootSaga);
+};

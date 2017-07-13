@@ -23,7 +23,9 @@
     "url": "https://github.com/infinitered/ignite-ir-boilerplate"
   },
   "scripts": {
-    "lint": "standard",
+    "lint": "yarn run -s lint:flow && yarn run -s lint:eslint",
+    "lint:eslint": "NODE_ENV=development eslint --ignore-path '.gitignore' .",
+    "lint:flow": "flow check",
     "test": "jest",
     "watch": "jest --runInBand --watch",
     "coverage": "jest --runInBand --coverage",
@@ -42,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
     "fs-jetpack": "^1.0.0",
     "jest": "^20.0.4",
     "np": "^2.15.0",
@@ -50,6 +51,14 @@
     "standard": "^10.0.2",
     "tempy": "^0.1.0",
     "eslint": "^3.19.0",
+    "flow-bin": "^0.49.1",        
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-plugin-module-resolver": "3.0.0-beta.3",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
     "eslint-config-airbnb": "^15.0.0",
     "eslint-config-airbnb-base": "^11.0.0",
     "eslint-config-samsao-base": "^1.0.1",
